@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI Portfolio</title>
-    <link rel="stylesheet" href="/Stlyles.css">
-    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="./Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
@@ -13,14 +12,13 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="logo">
-            <a href="#">UI Portfolio</a>
+            <img src="/Web-Development/pics/logo.ico" alt="UI Portfolio">
+            <span>UI Portfolio</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#" class="home-link">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#pages">Pages</a></li>
+            <li><a href="#services-section">Services</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><button class="hire-btn">Hire Me</button></li>
             <li><button class="theme-toggle"><i class="fas fa-moon"></i></button></li>
@@ -31,22 +29,184 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Hi, I'm Victor Hillan</h1>
-            <h2 class="typing-text">Web Developers</h2>
-            <p>I love Graphic design and Programming and have been working on my portfolio since 2025. I Can give your business a new Creative start right away!</p>
+            <div class="animated-text">
+                <h2 class="typing-text">Web Developer</h2>
+            </div>
+            <p>I love Graphic design and Programming and have been working on my portfolio since March 2025. I Can give your business a new Creative start right away!</p>
             <div class="cta-buttons">
                 <button class="hire-btn">Hire Me</button>
                 <button class="portfolio-btn">My Portfolio</button>
             </div>
         </div>
+        <div class="hero-image">
+            <img src="../Web-Development/pics/WIN_20231121_11_50_32_Pro.jpg" alt="Profile Picture">
+        </div>
+        <!-- Side Navigation -->
+        <div class="side-nav">
+            <button class="side-nav-btn expand"><i class="fas fa-chevron-right"></i></button>
+            <button class="side-nav-btn back"><i class="fas fa-arrow-left"></i></button>
+            <button class="side-nav-btn download"><i class="fas fa-download"></i></button>
+            <button class="side-nav-btn buy"><i class="fas fa-shopping-cart"></i></button>
+        </div>
     </section>
 
-    <!-- Side Navigation -->
-    <div class="side-nav">
-        <button class="side-nav-btn expand"><i class="fas fa-chevron-right"></i></button>
-        <button class="side-nav-btn back"><i class="fas fa-arrow-left"></i></button>
-        <button class="side-nav-btn download"><i class="fas fa-download"></i></button>
-        <button class="side-nav-btn buy"><i class="fas fa-shopping-cart"></i></button>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-header">
+                <h3>MY BIOGRAPHY</h3>
+                <h2>A Lead UI Designer & Web Developer Based In Kenya</h2>
+            </div>
+            
+            <div class="about-content">
+                <!-- Add this new div for the profile image -->
+                <div class="about-image">
+                    <img src="../Web-Development/pics/WIN_20231121_11_50_32_Pro.jpg" alt="Profile Picture">
+                </div>
+                
+                <div class="about-text">
+                    <p>I love Graphic design and coding and have been working on my portfolio since 2025. I Can give your business a new Creative start right away! Contact me and we will discuss your projects!</p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="label">Name:</span>
+                            <span class="value">Victor Hillan</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">From:</span>
+                            <span class="value">Kenya,East Africa</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Email:</span>
+                            <span class="value">victorhillan007@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Phone:</span>
+                            <span class="value">+254757148346</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Follow me on</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/Hillan007" class="Github"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/victor-muthomi-the-best" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/Hillan Vickie" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/victorhillan007" class="twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="mailto:victorhillan007@gmail.com" class="hire-btn">Hire me</a>
+                        <a href="/Web-Development/Vic's CV1.docx" download class="download-btn">Download CV</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-section" id="services-section">
+                <h2>What I Do For You</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>I specialize in crafting responsive, user-friendly, and visually engaging websites tailored to meet your needs. Whether it's a personal blog, business site, or e-commerce platform, I bring expertise in front-end and back-end development to ensure seamless functionality and aesthetic appeal. From intuitive UI/UX design to robust coding, I create solutions that enhance digital presence and user experience. Let’s build something incredible together.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>App development</h3>
+                        <p>I design and develop powerful, intuitive, and scalable mobile and web applications that enhance user experience and business efficiency. Whether you need a sleek UI, seamless functionality, or backend integration, I build apps tailored to your goals. From ideation to deployment, I ensure high performance, security, and cross-platform compatibility to bring your vision to life.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield"></i>
+                        <h3>Cybersecurity</h3>
+                        <p>I provide cybersecurity solutions to safeguard digital assets, protect sensitive data, and prevent cyber threats. From vulnerability assessments to encryption, firewall setup, and secure coding practices, I ensure robust protection for websites, applications, and networks. My goal is to enhance security, minimize risks, and create a safer online environment for businesses and individuals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h3>CONTACT ME</h3>
+                <h2>Let's Work Together</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>victorhillan007@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+254757148346</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Kenya, East Africa</p>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer/Contact Section -->
+    <footer id="contact" class="footer-section">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/Web-Development/pics/logo.ico" alt="UI Portfolio">
+                <span>UI Portfolio</span>
+            </div>
+            
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+254757148346</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>victorhillan007@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kenya, East Africa</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 UI Portfolio. All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Hillan Vickie"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/victorhillan007"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Hillan007"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/victor-muthomi-the-best"><i class="fab fa-linkedin"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="/Script.js"></script>
 </body>
