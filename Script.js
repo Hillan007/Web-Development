@@ -4,11 +4,28 @@ const body = document.body;
 const typingText = document.querySelector('.typing-text');
 
 // Theme Toggle Functionality
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    if (savedTheme === 'light-theme') {
+        themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    }
+}
+
+// Theme toggle click handler
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-theme');
     const icon = themeToggle.querySelector('i');
-    icon.classList.toggle('fa-moon');
-    icon.classList.toggle('fa-sun');
+    
+    // Toggle icon
+    if (body.classList.contains('light-theme')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'light-theme');
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', '');
+    }
 });
 
 // Typing Animation
@@ -51,12 +68,30 @@ expandBtn.addEventListener('click', () => {
     sideNav.classList.toggle('expanded');
 });
 
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scrolling for navigation
+document.addEventListener('DOMContentLoaded', () => {
+    // Home button click handler
+    document.querySelector('.home-link').addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        window.scrollTo({
+            top: 0,
             behavior: 'smooth'
+        });
+    });
+
+    // Other navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip for home link
+            
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
